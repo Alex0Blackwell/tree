@@ -26,7 +26,7 @@ class Tree():
                         else:
                             spaces += ' '
 
-                    formatIndent = spaces + '\\' + '-' * 4
+                    formatIndent = spaces + '\\' + '_' * 4
 
                     cprint(formatIndent, "white", end='')
                     cprint((file.name + '/'), "blue")
@@ -44,7 +44,7 @@ class Tree():
                 else:
                     spaces += ' '
 
-            formatIndent = spaces + '\\' + '-' * 2 + '>'
+            formatIndent = spaces + '\\' + '__>'
 
             cprint(formatIndent, "white", end='')
             cprint(file, "green")
