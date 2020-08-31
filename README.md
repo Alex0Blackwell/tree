@@ -30,7 +30,7 @@ Visualize the current working directory's file structure. Hidden files are not s
 ## Technologies
 
 - **Python**
-- **Colorama**
+- **Termcolor** and **Colorama**
   - For adding colored text to the terminal
 
 ## Installation
