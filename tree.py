@@ -1,9 +1,16 @@
 #!/usr/bin/python3
 
 from pathlib import Path
-from termcolor import cprint
+from termcolor import colored, cprint
+import colorama
+import operator
 import os
 import sys
+import time
+
+colorama.init()
+
+
 
 class Tree():
     """docstring for Tree."""
@@ -11,6 +18,8 @@ class Tree():
     def __init__(self, showAll):
         self.currPath = Path(os.getcwd())
         self.showAll = showAll
+        self.filesTraversed = 0
+        self.popularFileDict = {}
         cprint((self.currPath.name), "blue")
 
 
@@ -34,6 +43,14 @@ class Tree():
                     self.currPath = file;
                     self.print(indent + 4)
             elif( not(file.name[0] == '.' and not self.showAll)):
+                ext = file.name.split('.')
+                ext = ext[len(ext)-1]
+                if(ext in self.popularFileDict):
+                    self.popularFileDict[ext] += 1
+                else:
+                    self.popularFileDict[ext] = 1
+
+                self.filesTraversed += 1
                 allFiles.append(file.name)
 
         for file in allFiles:
@@ -69,7 +86,13 @@ More info with: "tree -h"''')
             sys.exit(1)
 
     tree = Tree(showAll)
+    t0 = time.time()
     tree.print()
+    totalTime = time.time() - t0
+
+    popularFileType = max(tree.popularFileDict.items(), key=operator.itemgetter(1))[0];
+    cprint(f"\nTraversed {tree.filesTraversed} file(s) in {round(totalTime, 2)} seconds", "cyan")
+    cprint(f"This directory is mostly .{popularFileType} files", "cyan")
 
 
 if __name__ == '__main__':
