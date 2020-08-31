@@ -2,7 +2,6 @@
 Visually represent your file structure in tree view from the command line!
 
 <p align="center">
-tree
 <a href="https://github.com/Alex0Blackwell/tree">
 <img src="./.images/tree.png"/>
 </a>
