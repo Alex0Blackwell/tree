@@ -1,18 +1,22 @@
-# Tree File Structure Visualization
-Visually represent your file structure in tree view from the command line!
+<h1 align="center">Tree</h1>
 
 <p align="center">
 <a href="https://github.com/Alex0Blackwell/tree">
-<img src="./.images/tree.png"/>
+<img src="./.images/logo.png"/ width="120px">
 </a>
 </p>
 
-## Table of contents
-* [Overview](#overview)
-* [Examples](#examples)
-* [Technologies](#technologies)
-* [Installation](#installation)
-* [Usage](#usage)
+<p align="center">
+  <a href="#overview">Overview</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#examples">Examples</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#technologies">Technologies</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#installation">Installation</a>
+  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#usage">Usage</a>
+</p>
 
 ## Overview
 Visualize the current working directory's file structure. Hidden files are not shown by default, however, hidden files can be shown if specified via the **-a** flag.
@@ -65,7 +69,7 @@ Now you can use the program in any directory!
 
 ## Usage
 
-```bash
+```
 $ tree
 usage: tree
 
@@ -83,4 +87,4 @@ tree -a
 
 ## License
 
-Licensed under the [MIT License](LICENSE)
+Licensed under the [MIT License](LICENSE).
